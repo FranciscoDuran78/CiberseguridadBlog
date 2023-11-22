@@ -62,8 +62,7 @@ function Analizador() {
                 Nosotros brindamos un servicio gratuito que permite analizar cuan segura es su contraseña basandonse en la longitud de la misma y caracteres.
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             </p>
-            <form className="flex gap-4 max-w-md" id="form" onSubmit={handleSumbit}>
-                <label className="sr-only">Password</label>
+            <form className="flex flex-wrap gap-4 max-w-md" id="form" onSubmit={handleSumbit}>
                 <input id="password" name="pass" type="text" required className="px-3.5 min-w-0 rounded-md border-0 bg-white/5  text-black shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm" placeholder="Ingrese la contraseña"/>
                 <button type="submit" className="py-2 px-3 rounded-md bg-primary-blue text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Analizar</button>
             </form>
