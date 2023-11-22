@@ -1,0 +1,37 @@
+---
+import { readAll } from "../lib/markdoc/read";
+import { project } from "../lib/markdoc/frontmatter.schema";
+import PageLayout from "../layouts/PageLayout.astro";
+import PageMeta from "../components/PageMeta.astro";
+import { SITE_TITLE } from "../config";
+import Analizador from "../components/Analizador";
+
+const projects = await readAll({
+  directory: "projects",
+  frontmatterSchema: project,
+});
+
+const sortedProjects = projects
+  .filter((p) => p.frontmatter.draft !== true)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).valueOf() -
+      new Date(a.frontmatter.date).valueOf()
+  );
+---
+
+<PageLayout>
+  <PageMeta title={`Projecto | ${SITE_TITLE}`} slot="meta" />
+  <section slot="main">
+    <Analizador client:idle/>
+  </section>
+</PageLayout>
+
+<style>
+
+    .padding {
+        margin: 10em !important;
+        padding: 10em !important;
+    }
+
+</style>
