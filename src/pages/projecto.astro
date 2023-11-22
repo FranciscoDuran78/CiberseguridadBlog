@@ -20,18 +20,9 @@ const sortedProjects = projects
   );
 ---
 
-<PageLayout>
+<PageLayout class="overflow-x-hidden">
   <PageMeta title={`Projecto | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
     <Analizador client:idle/>
   </section>
 </PageLayout>
-
-<style>
-
-    .padding {
-        margin: 10em !important;
-        padding: 10em !important;
-    }
-
-</style>
